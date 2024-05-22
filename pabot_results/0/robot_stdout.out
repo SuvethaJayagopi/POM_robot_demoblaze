@@ -1,0 +1,25 @@
+==============================================================================
+POM robot demoblaze                                                           
+==============================================================================
+POM robot demoblaze.TestCases                                                 
+==============================================================================
+POM robot demoblaze.TestCases.AddToCart :: test to login to login page        
+==============================================================================
+validate phone is added to cart                                       | PASS |
+------------------------------------------------------------------------------
+validate phone and monitor is added to cart.                          | PASS |
+------------------------------------------------------------------------------
+validate the monitor is removed                                       | PASS |
+------------------------------------------------------------------------------
+validate monitor element is not added to cart                         | PASS |
+------------------------------------------------------------------------------
+POM robot demoblaze.TestCases.AddToCart :: test to login to login ... | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+POM robot demoblaze.TestCases                                         | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+POM robot demoblaze                                                   | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  D:\POM_robot_demoblaze\pabot_results\0\output.xml

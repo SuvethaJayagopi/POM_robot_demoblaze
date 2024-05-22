@@ -1,0 +1,9 @@
+datasources:85628dd43d61bff9ca1c4c9ab1b5b2c7ec7177de
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:650eb1845a6405d10e7a4f4babcd0ce3d912bb4f
+--test loginData.validate unsuccessful login using invalid username
+--test loginData.Validate Unsuccessful login using invalid password
+--test loginData.validate Successful login using valid credentials
+--test loginData.validate Successful login using invalid credentials
+--test loginData.validate Unsuccessful login for blank username

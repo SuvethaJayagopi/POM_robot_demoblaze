@@ -1,0 +1,6 @@
+datasources:d6e8960ad7e28d1670c7dc750ccf18ece969bd58
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:1e94dcabd6f02f6dc77b7dc134edf7873f6511a1
+--suite POM robot demoblaze.TestCases.AddToCart
+--suite POM robot demoblaze.TestCases.loginData

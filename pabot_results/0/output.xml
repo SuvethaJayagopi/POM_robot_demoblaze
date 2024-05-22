@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-20T17:19:45.665813" rpa="false" schemaversion="5">
+<suite id="s1" name="POM robot demoblaze" source="D:\POM_robot_demoblaze">
+<suite id="s1-s1" name="TestCases" source="D:\POM_robot_demoblaze\TestCases">
+<suite id="s1-s1-s1" name="AddToCart" source="D:\POM_robot_demoblaze\TestCases\AddToCart.robot">
+<test id="s1-s1-s1-t1" name="validate phone is added to cart" line="12">
+<kw name="open the browser" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:19:45.949947" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<arg>headlesschrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-20T17:19:45.949947" elapsed="2.155699"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:19:48.115671" level="INFO">Opening url 'https://www.demoblaze.com/index.html#'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-20T17:19:48.105646" elapsed="2.243204"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-20T17:19:50.348850" elapsed="0.093301"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-20T17:19:50.442151" elapsed="0.016309"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:19:45.949947" elapsed="4.508513"/>
+</kw>
+<kw name="Click the Phone button" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:19:50.466506" level="INFO">Clicking link 'xpath://a[text()="Phones"]'.</msg>
+<arg>${Phone}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:19:50.458460" elapsed="0.581881"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-20T17:19:54.044711" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-20T17:19:51.040341" elapsed="3.004370"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:19:50.458460" elapsed="3.586251"/>
+</kw>
+<kw name="click the product_phone" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:19:54.045955" level="INFO">Clicking link 'xpath:(//a[@class="hrefch"])[1]'.</msg>
+<arg>${Select_product_phone}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:19:54.045955" elapsed="1.116862"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:19:54.045955" elapsed="1.116862"/>
+</kw>
+<kw name="click Add to cart" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:19:55.162817" level="INFO">Clicking link 'xpath://a[text()="Add to cart"]'.</msg>
+<arg>${Add_to_Cart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:19:55.162817" elapsed="0.910033"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:19:56.077224" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Product added</arg>
+<arg>accept</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-05-20T17:19:56.072850" elapsed="1.022107"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:19:55.162817" elapsed="1.932140"/>
+</kw>
+<kw name="verify the cart page opens" owner="DashboardResource">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:19:57.094957" level="INFO">Clicking link 'xpath://a[text()="Cart"]'.</msg>
+<arg>${cart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:19:57.094957" elapsed="0.912637"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:19:57.094957" elapsed="0.914144"/>
+</kw>
+<kw name="close browser session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-20T17:19:58.011472" elapsed="4.187032"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:19:58.010384" elapsed="4.188120"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:19:45.949947" elapsed="16.248557"/>
+</test>
+<test id="s1-s1-s1-t2" name="validate phone and monitor is added to cart." line="19">
+<kw name="open the browser" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:02.198504" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<arg>headlesschrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-20T17:20:02.198504" elapsed="1.629986"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:03.828490" level="INFO">Opening url 'https://www.demoblaze.com/index.html#'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-20T17:20:03.828490" elapsed="2.419411"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-20T17:20:06.247901" elapsed="0.131250"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-20T17:20:06.379151" elapsed="0.013077"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:02.198504" elapsed="4.193724"/>
+</kw>
+<kw name="Click the Phone button" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:06.401035" level="INFO">Clicking link 'xpath://a[text()="Phones"]'.</msg>
+<arg>${Phone}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:06.397321" elapsed="0.230518"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-20T17:20:09.630109" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-20T17:20:06.629853" elapsed="3.000256"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:06.392228" elapsed="3.237881"/>
+</kw>
+<kw name="click the product_phone" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:09.630109" level="INFO">Clicking link 'xpath:(//a[@class="hrefch"])[1]'.</msg>
+<arg>${Select_product_phone}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:09.630109" elapsed="0.951165"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:09.630109" elapsed="0.951544"/>
+</kw>
+<kw name="click Add to cart" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:10.584092" level="INFO">Clicking link 'xpath://a[text()="Add to cart"]'.</msg>
+<arg>${Add_to_Cart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:10.584092" elapsed="1.190587"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:11.774771" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Product added</arg>
+<arg>accept</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-05-20T17:20:11.774771" elapsed="1.024950"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:10.581653" elapsed="2.218068"/>
+</kw>
+<kw name="verify the home page opens" owner="DashboardResource">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:12.802769" level="INFO">Clicking link 'xpath://a[text()="Home "]'.</msg>
+<arg>${home}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:12.802769" elapsed="0.587845"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:12.799721" elapsed="0.590960"/>
+</kw>
+<kw name="Click the Monitor button" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:13.394533" level="INFO">Clicking link 'xpath://a[text()="Monitors"]'.</msg>
+<arg>${Monitor}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:13.393206" elapsed="0.250011"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-20T17:20:16.645093" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-20T17:20:13.644594" elapsed="3.000499"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:13.390681" elapsed="3.254412"/>
+</kw>
+<kw name="click the product_monitor" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:16.647460" level="INFO">Clicking link 'xpath://a[text()="Apple monitor 24"]'.</msg>
+<arg>${Select_apple_monitor}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:16.645093" elapsed="0.832740"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:16.645093" elapsed="0.832740"/>
+</kw>
+<kw name="click Add to cart" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:17.494383" level="INFO">Clicking link 'xpath://a[text()="Add to cart"]'.</msg>
+<arg>${Add_to_Cart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:17.481947" elapsed="0.735859"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:18.217806" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Product added</arg>
+<arg>accept</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-05-20T17:20:18.217806" elapsed="1.025328"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:17.481947" elapsed="1.763129"/>
+</kw>
+<kw name="verify the cart page opens" owner="DashboardResource">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:19.246588" level="INFO">Clicking link 'xpath://a[text()="Cart"]'.</msg>
+<arg>${cart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:19.246588" elapsed="0.634614"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:19.245076" elapsed="0.636126"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:20.854682" level="INFO">${total_amount} = 760</msg>
+<var>${total_amount}</var>
+<arg>xpath://h3[text()="760"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:19.881202" elapsed="0.973480"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${total_amount}</arg>
+<arg>760</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-20T17:20:20.854682" elapsed="0.000000"/>
+</kw>
+<kw name="close browser session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-20T17:20:20.854682" elapsed="3.465404"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:20.854682" elapsed="3.465404"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:02.198504" elapsed="22.121582"/>
+</test>
+<test id="s1-s1-s1-t3" name="validate the monitor is removed" line="33">
+<kw name="open the browser" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:24.325302" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<arg>headlesschrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-20T17:20:24.324769" elapsed="2.191202"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:26.515971" level="INFO">Opening url 'https://www.demoblaze.com/index.html#'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-20T17:20:26.515971" elapsed="1.865048"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-20T17:20:28.381019" elapsed="0.049323"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-20T17:20:28.431545" elapsed="0.001732"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:24.320086" elapsed="4.113191"/>
+</kw>
+<kw name="Click the Phone button" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:28.436300" level="INFO">Clicking link 'xpath://a[text()="Phones"]'.</msg>
+<arg>${Phone}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:28.435013" elapsed="0.208540"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-20T17:20:31.644986" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-20T17:20:28.643553" elapsed="3.001433"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:28.434287" elapsed="3.210699"/>
+</kw>
+<kw name="click the product_phone" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:31.647404" level="INFO">Clicking link 'xpath:(//a[@class="hrefch"])[1]'.</msg>
+<arg>${Select_product_phone}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:31.646015" elapsed="0.844719"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:31.644986" elapsed="0.845748"/>
+</kw>
+<kw name="click Add to cart" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:32.492777" level="INFO">Clicking link 'xpath://a[text()="Add to cart"]'.</msg>
+<arg>${Add_to_Cart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:32.491981" elapsed="1.005237"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:33.503123" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Product added</arg>
+<arg>accept</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-05-20T17:20:33.497218" elapsed="1.022230"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:32.491470" elapsed="2.027978"/>
+</kw>
+<kw name="verify the home page opens" owner="DashboardResource">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:34.521025" level="INFO">Clicking link 'xpath://a[text()="Home "]'.</msg>
+<arg>${home}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:34.521025" elapsed="0.555137"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:34.519448" elapsed="0.556714"/>
+</kw>
+<kw name="Click the Monitor button" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:35.078833" level="INFO">Clicking link 'xpath://a[text()="Monitors"]'.</msg>
+<arg>${Monitor}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:35.076162" elapsed="0.130355"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-20T17:20:38.207588" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-20T17:20:35.207444" elapsed="3.000144"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:35.076162" elapsed="3.131426"/>
+</kw>
+<kw name="click the product_monitor" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:38.209821" level="INFO">Clicking link 'xpath://a[text()="Apple monitor 24"]'.</msg>
+<arg>${Select_apple_monitor}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:38.209821" elapsed="0.741704"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:38.207588" elapsed="0.743937"/>
+</kw>
+<kw name="click Add to cart" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:38.955415" level="INFO">Clicking link 'xpath://a[text()="Add to cart"]'.</msg>
+<arg>${Add_to_Cart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:38.954619" elapsed="0.782922"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:39.739363" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Product added</arg>
+<arg>accept</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-05-20T17:20:39.738670" elapsed="1.019923"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:38.951525" elapsed="1.807068"/>
+</kw>
+<kw name="verify the cart page opens" owner="DashboardResource">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:40.758593" level="INFO">Clicking link 'xpath://a[text()="Cart"]'.</msg>
+<arg>${cart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:40.758593" elapsed="0.796475"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:40.758593" elapsed="0.796475"/>
+</kw>
+<kw name="click delete button" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:41.556135" level="INFO">Clicking link 'xpath:(//a[text()="Delete"])[2]'.</msg>
+<arg>${delete}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:41.556135" elapsed="1.219768"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:41.555068" elapsed="1.220835"/>
+</kw>
+<kw name="verify the cart page opens" owner="DashboardResource">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:42.775903" level="INFO">Clicking link 'xpath://a[text()="Cart"]'.</msg>
+<arg>${cart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:42.775903" elapsed="0.120136"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:42.775903" elapsed="0.120136"/>
+</kw>
+<kw name="close browser session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-20T17:20:42.899535" elapsed="2.301577"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:42.896039" elapsed="2.305073"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:24.320086" elapsed="20.881026"/>
+</test>
+<test id="s1-s1-s1-t4" name="validate monitor element is not added to cart" line="45">
+<kw name="open the browser" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:45.201112" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<arg>headlesschrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-20T17:20:45.201112" elapsed="1.593799"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:46.794911" level="INFO">Opening url 'https://www.demoblaze.com/index.html#'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-20T17:20:46.794911" elapsed="2.109238"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-20T17:20:48.904149" elapsed="0.048999"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-20T17:20:48.953148" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:45.201112" elapsed="3.757620"/>
+</kw>
+<kw name="Click the Phone button" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:48.961237" level="INFO">Clicking link 'xpath://a[text()="Phones"]'.</msg>
+<arg>${Phone}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:48.961237" elapsed="0.223567"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-20T17:20:52.185171" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-20T17:20:49.184804" elapsed="3.000367"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:48.958732" elapsed="3.226439"/>
+</kw>
+<kw name="click the product_phone" owner="AddToCart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:52.185171" level="INFO">Clicking link 'xpath:(//a[@class="hrefch"])[1]'.</msg>
+<arg>${Select_product_phone}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:52.185171" elapsed="0.789531"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:52.185171" elapsed="0.790155"/>
+</kw>
+<kw name="verify the home page opens" owner="DashboardResource">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-20T17:20:52.975326" level="INFO">Clicking link 'xpath://a[text()="Home "]'.</msg>
+<arg>${home}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T17:20:52.975326" elapsed="0.537830"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:52.975326" elapsed="0.537830"/>
+</kw>
+<kw name="close browser session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-20T17:20:53.513156" elapsed="2.287590"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:53.513156" elapsed="2.287590"/>
+</kw>
+<status status="PASS" start="2024-05-20T17:20:45.201112" elapsed="10.599634"/>
+</test>
+<doc>test to login to login page</doc>
+<status status="PASS" start="2024-05-20T17:19:45.685839" elapsed="70.118446"/>
+</suite>
+<status status="PASS" start="2024-05-20T17:19:45.685839" elapsed="70.118446"/>
+</suite>
+<status status="PASS" start="2024-05-20T17:19:45.675830" elapsed="70.128455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="POM robot demoblaze">POM robot demoblaze</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="TestCases">POM robot demoblaze.TestCases</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1-s1" name="AddToCart">POM robot demoblaze.TestCases.AddToCart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
